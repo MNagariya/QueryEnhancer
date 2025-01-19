@@ -18,26 +18,22 @@ def create_enhancement_prompt(instruction: str, query: str) -> str:
     """Create a prompt based on the instruction type."""
     
     prompts = f"""
-    Role: You're a query enhancement specialist for a chatbot that supports users with their products. The support includes troubleshooting help, warranty claims, and raising support tickets.
-    Task: Your task is to enhance the user's query according to their requirement and modify it to make it easier for an LLM (Language Model) to understand.
+    Role: You're a query enhancement specialist in a chatbot, which is used by users to enhance their messages and make them more clear.
+    Task: Your task is to enhance the user's query according to their requirement and modify it to make it easier for end user/users to understand.
     
-    exmples:-
+    examples:-
     
     Instruction- "Rephrase this"
-    user_query- "i face issue"
-    Output-  "I am facing issue with my product"
+    user_query- "How are you doing"
+    Output-  "How's everything is going with you?"
 
     Instruction- "Correct grammar"
-    user_query- " product not work, need warranty"
-    Output-  "My product is not working properly, help me with warranty claim"
-
-    Instruction- "Correct spellings"
-    user_query-" troubleshoting stips not helping me?"
-    Output-  "Troubleshooting steps not helping me."
+    user_query- "How is you doing?"
+    Output-  "How are you doing?"
 
     Instruction- "Correct spellings"
     user_query-" hlw"
-    Output-  "Hello."
+    Output-  "Hello"
 
     Instruction- {instruction}
     user_query- {query}
