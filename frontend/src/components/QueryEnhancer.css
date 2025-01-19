@@ -1,0 +1,164 @@
+.query-enhancer {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 1rem;
+}
+
+.message_group {
+    position: relative;
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+.input-wrapper {
+    position: relative;
+    flex: 1;
+}
+
+.text_area_input {
+    width: 100%;
+    min-height: 50px;
+    padding: 12px 12px 12px 12px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    resize: none;
+    line-height: 1.5;
+    border: none;
+    background-color: transparent;
+    resize: none;
+    outline: none;
+}
+
+/* Container for both buttons */
+.button-group {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    padding-right: 4px;
+}
+
+.enhance-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+}
+
+.chatbox_btn {
+    background: none !important;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+}
+
+.enhance-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.enhance-button:hover {
+    background-color: rgba(190, 50, 43, 0.1);
+    border-radius: 4px;
+}
+
+.chatbox_btn:disabled {
+    cursor: not-allowed;
+}
+
+.chatbox_btn:hover:not(:disabled) {
+    background: #a12b25 !important;
+}
+
+.enhance-options {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    margin-top: 8px;
+    display: flex;
+    gap: 0.5rem;
+    z-index: 10;
+}
+
+.enhance-options button {
+    flex: 1;
+    padding: 0.5rem 1rem;
+    /* border: 1px solid #ccc; */
+    border-radius: 4px;
+    background-color: white;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    white-space: nowrap;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.enhance-options button:hover {
+    background-color: #f0f0f0;
+}
+
+.enhance-options button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.loading {
+    text-align: center;
+    color: #666;
+    margin-top: 1rem;
+    position: relative;
+    left: 15%;
+}
+
+.enhance-button, .chatbox_btn {
+    position: relative;
+}
+
+/* Custom tooltip styles */
+.enhance-button::after,
+.chatbox_btn::after {
+    content: attr(title);
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 4px 8px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    border-radius: 4px;
+    font-size: 12px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s, visibility 0.2s;
+}
+
+.enhance-button:hover::after,
+.chatbox_btn:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Adjust button hover effects */
+.enhance-button:hover {
+    background-color: rgba(190, 50, 43, 0.1);
+    border-radius: 4px;
+}
+
+.chatbox_btn:hover:not(:disabled) {
+    background: #a12b25 !important;
+} 
